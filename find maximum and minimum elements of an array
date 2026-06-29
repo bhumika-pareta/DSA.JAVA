@@ -1,0 +1,37 @@
+import java.util.*;
+
+public class ArrayMaxMin{
+public static void main(String[] args) {
+
+
+  Scanner sc = new Scanner(System.in);
+ int size;
+ int i=0;
+
+System.out.println("enter the size of an array");
+
+size = sc.nextInt();
+int[] maxmin = new int[size];
+
+for( i=0; i<maxmin.length; i++) {
+
+  maxmin[i]=sc.nextInt();
+
+}
+
+int max = Integer.MIN_VALUE;
+int min = Integer.MAX_VALUE;
+
+for(i=0; i<size ; i++){
+
+  if (maxmin[i]<min){
+    min= maxmin[i];
+  }
+ if (maxmin[i]>max){
+    max = maxmin[i];
+  }
+}
+System.out.println("Maximum element : " + max );
+System.out.println("Minimum element : " + min);
+}
+}
