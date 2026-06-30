@@ -1,0 +1,22 @@
+class Solution {
+    public boolean containsDuplicate(int[] nums) {
+       int left = 0;
+       int right = nums.length-1;
+       int temp;
+       
+       while(left<right){
+temp=nums[left];
+nums[left]=nums[right];
+nums[right]=temp;
+temp++;
+
+if (nums[left]=nums[right]) {
+    return true;
+}
+       }
+
+
+return false;
+        
+            }
+}
